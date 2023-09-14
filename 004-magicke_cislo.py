@@ -1,3 +1,20 @@
+# Zadanie úlohy explicitne nevyžaduje validáciu dátumu, preto toto riešenie neoveruje, či sa vygenerovaný dátum nachádza v kalendári. 
+# Kód, ktorý to kontroluje je zakomentovaný na konci tohto súboru.
+import random
+month = random.randint(1,12)
+year = random.randint(100,2022)
+day = random.randint(1,31)
+def cipher_sum(n):
+    result = 0
+    while n > 0:
+        result += n%10
+        n = n//10
+    return result
+if cipher_sum(day) + cipher_sum(month) + cipher_sum(year) < 10:
+    print(day,month,year,"is magic number")
+else:
+    print(day,month,year,"is not magic number")
+"""
 import random
 month = random.randint(1,12)
 year = random.randint(100,2022)
@@ -20,3 +37,4 @@ if cipher_sum(day) + cipher_sum(month) + cipher_sum(year) < 10:
     print(day,month,year,"is magic number")
 else:
     print(day,month,year,"is not magic number")
+"""
