@@ -10,10 +10,10 @@ def cipher_sum(n):
         result += n%10
         n = n//10
     return result
-if cipher_sum(day) + cipher_sum(month) + cipher_sum(year) < 10:
-    print(day,month,year,"is magic number")
-else:
-    print(day,month,year,"is not magic number")
+magic = cipher_sum(year) + cipher_sum(month) + cipher_sum(day)
+while magic >= 10:
+    magic = cipher_sum(magic)
+print(magic)
 """
 import random
 month = random.randint(1,12)
@@ -33,8 +33,8 @@ def cipher_sum(n):
         result += n%10
         n = n//10
     return result
-if cipher_sum(day) + cipher_sum(month) + cipher_sum(year) < 10:
-    print(day,month,year,"is magic number")
-else:
-    print(day,month,year,"is not magic number")
+magic = cipher_sum(year) + cipher_sum(month) + cipher_sum(day)
+while magic >= 10:
+    magic = cipher_sum(magic)
+print(magic)
 """
