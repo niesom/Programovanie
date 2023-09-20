@@ -9,7 +9,7 @@ def cipher_sum(n):
         n = n//10
     return result
 magic = cipher_sum(year) + cipher_sum(month) + cipher_sum(day)
-while magic > 10:
+while magic >= 10:
     print(magic)
     magic = cipher_sum(magic)
 print(magic)
