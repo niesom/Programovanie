@@ -6,14 +6,7 @@ x = 300
 y = 300
 current_length = 0
 string = input("Zadaj tri cisla oddelene medzerou: ") + " "
-arr = []
-temp = ""
-for index in range(len(string)):
-    if string[index]==" ":
-        arr += [int(temp)]
-        temp = ""
-    else:
-        temp += string[index]
+arr = list(map(int, string.split()))
 LINE_LENGTH = arr[0]
 INCREMENT = arr[1]
 TOTAL_LENGTH = arr[2]
